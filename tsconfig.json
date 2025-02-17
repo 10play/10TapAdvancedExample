@@ -1,0 +1,7 @@
+{
+  "extends": "expo/tsconfig.base",
+  "exclude": ["./editor-web"],
+  "compilerOptions": {
+    "strict": true
+  }
+}

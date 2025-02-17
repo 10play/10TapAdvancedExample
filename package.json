@@ -1,0 +1,33 @@
+{
+  "name": "10tap-advanced-example",
+  "version": "1.0.0",
+  "main": "expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "editor:dev": "vite --config ./editor-web/vite.config.ts -w build",
+    "editor:build": "vite --config ./editor-web/vite.config.ts build && yarn editor:post-build",
+    "editor:post-build": "node ./node_modules/@10play/tentap-editor/scripts/buildEditor.js ./editor-web/build/index.html",
+    "reverse-android": "adb reverse tcp:3000 tcp:3000"
+  },
+  "dependencies": {
+    "@10play/tentap-editor": "0.6.1",
+    "@tiptap/extension-character-count": "^2.11.5",
+    "expo": "~51.0.17",
+    "expo-status-bar": "~1.12.1",
+    "react": "18.2.0",
+    "react-native": "0.74.2",
+    "react-native-webview": "^13.10.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "@types/react": "~18.2.45",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.1.3",
+    "vite": "^5.3.3",
+    "vite-plugin-singlefile": "^2.0.2"
+  },
+  "private": true
+}
