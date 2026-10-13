@@ -13,17 +13,23 @@
     "reverse-android": "adb reverse tcp:3000 tcp:3000"
   },
   "dependencies": {
-    "@10play/tentap-editor": "0.6.1",
-    "@tiptap/extension-character-count": "^2.11.5",
+    "@10play/tentap-editor": "1.0.1",
+    "@tiptap/extension-document": "^3.11.0",
+    "@tiptap/extension-paragraph": "^3.11.0",
+    "@tiptap/extension-text": "^3.11.0",
+    "@tiptap/extensions": "^3.11.0",
+    "@tiptap/react": "^3.11.0",
     "expo": "~51.0.17",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
+    "react-dom": "18.2.0",
     "react-native": "0.74.2",
     "react-native-webview": "^13.10.4"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.45",
+    "@types/react-dom": "~18.2.25",
     "@vitejs/plugin-react": "^4.3.1",
     "typescript": "^5.1.3",
     "vite": "^5.3.3",

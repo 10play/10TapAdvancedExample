@@ -1,5 +1,5 @@
 import { BridgeExtension } from "@10play/tentap-editor";
-import CharacterCount from "@tiptap/extension-character-count";
+import { CharacterCount } from "@tiptap/extensions";
 
 type CounterEditorState = {
   wordCount: number;
