@@ -4,7 +4,6 @@ import {
   SafeAreaView,
   View,
   KeyboardAvoidingView,
-  Platform,
   StyleSheet,
   Text,
 } from "react-native";
@@ -33,7 +32,7 @@ export const Basic = () => {
       <Counter editor={editor} />
       <RichText editor={editor} />
       <KeyboardAvoidingView
-        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        behavior="padding"
         style={exampleStyles.keyboardAvoidingView}
       >
         <Toolbar editor={editor} />
