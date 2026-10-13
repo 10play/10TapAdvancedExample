@@ -1,8 +1,7 @@
+import { exec } from "child_process";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteSingleFile } from "vite-plugin-singlefile";
-
-const exec = require("child_process").exec;
 
 // This config is used to build the web editor into a single file
 
@@ -34,11 +33,8 @@ export default defineConfig({
     {
       name: "postbuild-commands",
       closeBundle: async () => {
-        exec("yarn editor:post-build", (error, stdout, stderr) => {
-          if (error) {
-            console.error(`exec error: ${error}`);
-            return;
-          }
+        exec("yarn editor:post-build", (error) => {
+          if (error) console.error(`exec error: ${error}`);
         });
       },
     },
